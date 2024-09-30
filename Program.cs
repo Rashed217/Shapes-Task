@@ -17,7 +17,7 @@
                 Console.Write("Enter your choice (0-4): ");
 
 
-                while (!int.TryParse(Console.ReadLine(), out choice) || choice < 0 || choice > 4)
+                while (!int.TryParse(Console.ReadLine(), out choice))
                 {
                     Console.WriteLine("Invalid choice. Please enter a number between 0 and 4.");
                 }
@@ -113,6 +113,8 @@
                     break;
                 Console.WriteLine("Invalid input. Please enter a numeric value.");
             }
+            Shape R = new Rectangle(rectangleWidth, rectangleHeight);
+            Console.WriteLine($"Area of Rectangle: {R.Area()}");
 
         }
 
